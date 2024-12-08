@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -48,11 +47,12 @@
                 border-radius: 4px;
                 cursor: pointer;
                 color: #333;
-                transition: background-color 0.3s;
+                transition: background-color 0.3s, transform 0.3s;
             }
 
             button:hover {
                 background-color: #bbb;
+                transform: scale(1.1);
             }
 
             #nono {
@@ -74,23 +74,27 @@
                 opacity: 1;
             }
 
+            audio {
+                display: none;
+            }
+
         </style>
     </head>
     <body>
-        <h1>hey</h1>
-        <p>what was the nickname you gave me?</p>
+        <h1>Hey</h1>
+        <p>What was the nickname you gave me?</p>
         <input type="text" id="trial" placeholder="?">
-        <button onclick="unlockPage()">okay</button>  
+        <button onclick="unlockPage()">Okay</button>  
 
         <div id="nono">
-            <h2 class="fade-in">hi jay, i miss u, i know u blocked me, im sorry. i wrote this poem-- or what seems like it--for you</h2>
-            <p class="fade-in">through rusted keys we talked, but through red threads they flew, perhaps only mine. <br>They whisper with the wind like conversations we never finished</p>
-            <p class="fade-in">i dont remember how or why, but i saw u let the wind take u. <br>How could i find u if i couldnt remember how u left? <br>How could i find someone that doesnt want to be found?</p>
-            <p class="fade-in">Ill wait for the time when i can see ur smile while eating bibingka while we talk abt why we should be eating less. <br>I'll pay for it. but i could only dream for these things-- well if they were to happen,  <br>now that u left me, id be paying for myself, while i talk to myself.</p>
-            <p class="fade-in">i hope u remember me, or just my name. When you play the games we played. Or when you hear the artists i play. <br>Ill remember the things we did, but ill be happy if u remember the first letter of my name, <br>or js the way it sounds. ill be happy. i will. ill be the eternal sunshine in ur spotless mind.<br>Mark me the villain in ur story, make a story of how bad i was and demonize me.<br> Ill be happy u remember me</p>
-            <p class="fade-in">well if thats what u want, what ur heart aches for in the darkest of nights: to leave. <br>Then ill wave bye to the ship u stand, while u look in front. I look at ur back, wondering why u dont wave back. <br>Like a dog, with a bird at ur door, ill wait til u appreciate me-- <br>at least the things i did for u.<br><br></p>
-            <p class="fade-in">i miss u, ik i sound corny. sorry tej i was overthinking, u even had to block me:/ i had to make an html for this haha<br>alr, ingat sa wte concert, this is the closest i'll get to listening to wte with u.  love u.</p>
-            <p class="fade-in">sincerely and wholeheartedly,<br><i>Tom</i></p>
+            <h2 class="fade-in">Hi Jay, I miss you. I know you blocked me, I'm sorry. I wrote this poem—or what seems like it—for you.</h2>
+            <p class="fade-in">Through rusted keys we talked, but through red threads they flew, perhaps only mine. <br>They whisper with the wind like conversations we never finished.</p>
+            <p class="fade-in">I don't remember how or why, but I saw you let the wind take you. <br>How could I find you if I couldn't remember how you left? <br>How could I find someone that doesn't want to be found?</p>
+            <p class="fade-in">I'll wait for the time when I can see your smile while eating bibingka and we talk about why we should be eating less. <br>I'll pay for it. But I could only dream of these things... Now that you left me, I'll be paying for myself while I talk to myself.</p>
+            <p class="fade-in">I hope you remember me, or just my name. When you play the games we played or hear the artists I play. <br>I'll remember the things we did, but I'll be happy if you remember the first letter of my name, <br>or just the way it sounds. I'll be happy. I will. I'll be the eternal sunshine in your spotless mind.<br>Mark me the villain in your story, make a story of how bad I was and demonize me.<br>I'll be happy you remember me.</p>
+            <p class="fade-in">Well, if that's what you want, what your heart aches for in the darkest of nights: to leave. <br>Then I'll wave bye to the ship you stand on while you look ahead. I look at your back, wondering why you don't wave back. <br>Like a dog, with a bird at your door, I'll wait till you appreciate me—at least the things I did for you.</p>
+            <p class="fade-in">I miss you. I know I sound corny. Sorry Tej, I was overthinking. You even had to block me. I had to make an HTML for this haha.<br>Alright, ingat sa WTE concert, this is the closest I'll get to listening to WTE with you. Love you.</p>
+            <p class="fade-in">Sincerely and wholeheartedly,<br><i>Tom</i></p>
         </div>
 
         <audio id="music" src="seasons.mp3" preload="auto"></audio>
@@ -107,11 +111,11 @@
                     fadeInElements.forEach(function (element, index) {
                         setTimeout(function () {
                             element.classList.add('show');
-                        }, index * 1000);
+                        }, index * 1000); // Delay for fade-in of each element
                     });
                     document.getElementById("music").play();
                 } else {
-                    alert("get outta here>:(");
+                    alert("Get outta here >:(");
                     window.location.reload();
                 }
             }

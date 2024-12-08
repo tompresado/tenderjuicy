@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -62,6 +62,13 @@
                 color: #333;
                 line-height: 1.8;
                 text-align: left;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+
+            .show {
+                display: block;
+                opacity: 1;
             }
 
         </style>
@@ -93,14 +100,14 @@
 
          <audio id="music" src="seasons.mp3" preload="auto"></audio>
 
- <script> 
+        <script> 
             function unlockPage(){
                 var inputCode = document.getElementById("trial").value.toLowerCase();
                 var answer = "pooks";
 
                 if (inputCode === answer) {
                     document.body.style.display = 'block';
-                    document.getElementById("nono").style.display = 'block';
+                    document.getElementById("nono").classList.add('show');
                     document.getElementById("music").play();
                 } else {
                     alert("get outta here>:(");
@@ -110,5 +117,3 @@
         </script>
     </body>
 </html>
-
-

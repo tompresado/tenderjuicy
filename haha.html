@@ -4,15 +4,76 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>i mishuu</title>
+        <style>
+            body {
+                background-color: #f7f7f7;
+                font-family: 'Arial', sans-serif;
+                color: #333;
+                margin: 0;
+                padding: 20px;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+                font-weight: 300;
+                margin: 20px 0;
+                color: #333;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+                line-height: 1.6;
+                color: #555;
+            }
+
+            input {
+                font-size: 1rem;
+                padding: 10px;
+                margin: 10px 0;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                width: 200px;
+                text-align: center;
+                color: #333;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 1rem;
+                background-color: #ccc;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                color: #333;
+                transition: background-color 0.3s;
+            }
+
+            button:hover {
+                background-color: #bbb;
+            }
+
+            #nono {
+                display: none;
+                margin-top: 20px;
+                font-size: 1rem;
+                font-weight: 400;
+                color: #333;
+                line-height: 1.8;
+                text-align: left;
+            }
+
+        </style>
     </head>
     <body>
-        <h1> hey </h1>
-        <p> what was the nickname you gave me? </p>
+        <h1>hey</h1>
+        <p>what was the nickname you gave me?</p>
         <input type="text" id="trial" placeholder="?">
         <button onclick="unlockPage()">okay</button>  
 
-        <div id="nono" style="display:none;">
-            <h2> hi jay, i miss u, i know u blocked me, im sorry. i wrote this poem-- or what seems like it--for you</h2>
+        <div id="nono">
+            <h2>hi jay, i miss u, i know u blocked me, im sorry. i wrote this poem-- or what seems like it--for you</h2>
             <p>
                 through rusted keys we talked, but through red threads they flew, perhaps only mine. <br>They whisper with the wind like conversations we never finished
                 <br><br>
@@ -34,8 +95,8 @@
                 var answer = "pooks";
 
                 if (inputCode === answer) {
-                    document.body.style.display = 'block';  // Reveal the entire body
-                    document.getElementById("nono").style.display = 'block';  // Show the poem
+                    document.body.style.display = 'block';
+                    document.getElementById("nono").style.display = 'block';
                 } else {
                     alert("get outta here>:(");
                 }
@@ -43,3 +104,4 @@
         </script>
     </body>
 </html>
+

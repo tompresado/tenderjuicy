@@ -79,7 +79,8 @@
                 position: absolute;
                 right: 20px;
                 bottom: 20px;
-                max-width: 200px;
+                max-width: 400px; /* Increased size */
+                max-height: 400px; /* Increased size */
                 opacity: 1;
                 transition: opacity 1s ease-in-out;
             }
@@ -119,16 +120,16 @@
                     fadeInElements.forEach(function (element, index) {
                         setTimeout(function () {
                             element.classList.add('show');
-                        }, index * 1000);
+                        }, index * 1000); // 1 second delay for each element
                     });
 
                     setTimeout(function() {
                         var image = document.getElementById("image");
-                        image.style.display = 'block';
+                        image.style.display = 'block'; // Show the image
                         setTimeout(function () {
-                            image.classList.add('show'); 
+                            image.classList.add('show'); // Fade it in after 1 second
                         }, 1000);
-                    }, fadeInElements.length * 1000);
+                    }, fadeInElements.length * 1000); // Delay the image appearance until all text fades in
 
                     document.getElementById("music").play();
                 } else {

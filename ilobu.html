@@ -62,6 +62,7 @@
                 color: #333;
                 line-height: 1.8;
                 text-align: left;
+                position: relative;
             }
 
             .fade-in {
@@ -71,6 +72,16 @@
 
             .fade-in.show {
                 opacity: 1;
+            }
+
+            #image {
+                display: none;
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+                max-width: 200px;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
             }
 
         </style>
@@ -94,6 +105,8 @@
 
         <audio id="music" src="seasons.mp3" preload="auto"></audio>
 
+        <img id="image" src="465871217_913706493813151_8120443816360096574_n.jpg" alt="Image" />
+
         <script>
             function unlockPage() {
                 var inputCode = document.getElementById("trial").value.toLowerCase();
@@ -106,8 +119,17 @@
                     fadeInElements.forEach(function (element, index) {
                         setTimeout(function () {
                             element.classList.add('show');
-                        }, index * 1000); // 1 second delay for each element
+                        }, index * 1000);
                     });
+
+                    setTimeout(function() {
+                        var image = document.getElementById("image");
+                        image.style.display = 'block';
+                        setTimeout(function () {
+                            image.classList.add('show'); 
+                        }, 1000);
+                    }, fadeInElements.length * 1000);
+
                     document.getElementById("music").play();
                 } else {
                     alert("get outta here>:(");

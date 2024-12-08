@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -55,19 +56,13 @@
             }
 
             #nono {
+                display: none;
                 margin-top: 20px;
                 font-size: 1rem;
                 font-weight: 400;
                 color: #333;
                 line-height: 1.8;
                 text-align: left;
-                opacity: 0;
-                transition: opacity 1s ease-in-out;
-            }
-
-            .show {
-                display: block;
-                opacity: 1;
             }
 
         </style>
@@ -105,10 +100,8 @@
                 var answer = "pooks";
 
                 if (inputCode === answer) {
+                    document.body.style.display = 'block';
                     document.getElementById("nono").style.display = 'block';
-                    setTimeout(function() {
-                        document.getElementById("nono").classList.add('show');
-                    }, 10);
                     document.getElementById("music").play();
                 } else {
                     alert("get outta here>:(");

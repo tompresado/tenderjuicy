@@ -106,8 +106,10 @@
                 var answer = "pooks";
 
                 if (inputCode === answer) {
-                    document.body.style.display = 'block';
-                    document.getElementById("nono").classList.add('show');
+                    document.getElementById("nono").style.display = 'block';
+                    setTimeout(function() {
+                        document.getElementById("nono").classList.add('show');
+                    }, 10);
                     document.getElementById("music").play();
                 } else {
                     alert("get outta here>:(");

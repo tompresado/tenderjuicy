@@ -93,30 +93,21 @@
 
          <audio id="music" src="seasons.mp3" preload="auto"></audio>
 
-<script>
-    async function unlockPage() {
-        const inputCode = document.getElementById("trial").value.toLowerCase();
-        const answer = "pooks";
+ <script> 
+            function unlockPage(){
+                var inputCode = document.getElementById("trial").value.toLowerCase();
+                var answer = "pooks";
 
-        if (inputCode === answer) {
-            // Send correct response to the backend
-            await fetch('log_response.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `response=${encodeURIComponent(inputCode)}`,
-            });
-
-            document.body.style.display = 'block';
-            document.getElementById("nono").style.display = 'block';
-            document.getElementById("music").play();
-        } else {
-            alert("get outta here>:(");
-            window.location.reload();
-        }
-    }
-</script>
+                if (inputCode === answer) {
+                    document.body.style.display = 'block';
+                    document.getElementById("nono").style.display = 'block';
+                    document.getElementById("music").play();
+                } else {
+                    alert("get outta here>:(");
+                    window.location.reload();
+                }
+            }
+        </script>
     </body>
 </html>
 
